@@ -28,8 +28,9 @@ public class GUI implements ActionListener {
         buttonText = "Click to Tune";
 
             //panel setup
-            panel.setBorder(BorderFactory.createEmptyBorder(30,30,10,10));
+            panel.setBorder(BorderFactory.createEmptyBorder(300,300,100,100));
             panel.setLayout(new GridLayout(0,1));
+            panel.setBackground(Color.CYAN);
             panel.add(button);
 
 
@@ -37,6 +38,7 @@ public class GUI implements ActionListener {
             frame.add(panel, BorderLayout.CENTER);
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             frame.pack();
+            frame.setBackground(Color.CYAN);
 
 
             button.addActionListener(this);
