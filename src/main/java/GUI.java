@@ -14,6 +14,7 @@ public class GUI implements ActionListener {
 
     //create elements
     private JButton button;
+    public JLabel label;
 
     public GUI(){
 
@@ -23,7 +24,7 @@ public class GUI implements ActionListener {
         title = "Tuner";
 
         button = new JButton(buttonText);
-        buttonText = "Click to Tune";
+        label = new JLabel("test");
 
         //panel setup
         panel.setBorder(BorderFactory.createEmptyBorder(300,300,100,100));
@@ -43,6 +44,7 @@ public class GUI implements ActionListener {
         //make everything visible
         panel.setVisible(true);
         button.setVisible(true);
+        label.setVisible(true);
         frame.setVisible(true);
         
     }
@@ -50,7 +52,8 @@ public class GUI implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         //starts listening
-        new AudioListener();
+        //new AudioListener();
+        new AudioProcessor();
     }
 
 
