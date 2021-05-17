@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="2021 Intro To AI Final" />
+        <module name="2021-Intro-To-AI-Final-5" />
       </profile>
     </annotationProcessing>
   </component>

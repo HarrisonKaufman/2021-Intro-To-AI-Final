@@ -7,15 +7,19 @@ public class AudioProcessor extends GUI {
 
     float pitchResult;
     public AudioProcessor() {
-
-        AudioDispatcher dispatcher = AudioDispatcherFactory.fromDefaultMicrophone(22050, 1024, 0);
-
+        try {
+            AudioDispatcher dispatcher = AudioDispatcherFactory.fromDefaultMicrophone(22050, 1024, 0);
+        }
+        catch (NoClassDefFoundError ncdfe){
+            label.setText("YOUR MICROPHONE IS NOT SUPPORTED");
+            System.out.println("microphone bad");
+        }
         PitchDetectionHandler pitchDetectionHandler = (pitchDetectionResult, audioEvent) -> {
             final float pitchInHz = pitchDetectionResult.getPitch();
             pitchResult = pitchInHz;
         };
 
-
+        processPitch(pitchResult);
     }
 
     public void processPitch(float pitch) {

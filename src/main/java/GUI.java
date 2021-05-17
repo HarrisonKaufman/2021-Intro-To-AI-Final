@@ -18,26 +18,31 @@ public class GUI implements ActionListener {
 
     public GUI(){
 
-        JFrame frame = new JFrame(title);
-        JPanel panel = new JPanel();
+         frame = new JFrame(title);
+         panel = new JPanel();
 
         title = "Tuner";
 
+        label = new JLabel("asher behmer is a very cool dude");
+
         button = new JButton(buttonText);
-        label = new JLabel("test");
+        button.setAlignmentX(Component.CENTER_ALIGNMENT);
+        button.setAlignmentY(Component.CENTER_ALIGNMENT);
 
         //panel setup
         panel.setBorder(BorderFactory.createEmptyBorder(300,300,100,100));
-        panel.setLayout(new GridLayout(0,1));
-        panel.setBackground(Color.CYAN);
+        panel.setLayout(new GridLayout(0,2));
+        panel.setBackground(Color.orange);
         panel.add(button);
+        panel.add(label);
 
         //frame setup
         frame.add(panel, BorderLayout.CENTER);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
-        frame.setBackground(Color.CYAN);
-        
+        frame.setBackground(Color.ORANGE);
+        frame.setTitle("Tuner");
+
         //make button listen for clicks
         button.addActionListener(this);
 
@@ -52,7 +57,7 @@ public class GUI implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         //starts listening
-        //new AudioListener();
+       // new AudioListener();
         new AudioProcessor();
     }
 
