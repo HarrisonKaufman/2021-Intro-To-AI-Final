@@ -23,7 +23,7 @@ public class GUI implements ActionListener {
 
         title = "Tuner";
 
-        label = new JLabel("asher behmer is a very cool dude");
+        label = new JLabel("Waiting for input...");
 
         button = new JButton(buttonText);
         button.setAlignmentX(Component.CENTER_ALIGNMENT);
